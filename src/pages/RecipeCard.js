@@ -1,6 +1,9 @@
 import React from 'react';
 
 const RecipeCard = ({ recipe }) => {
+    if (!recipe) {
+        return null; 
+    }
   return (
     <div className="border border-gray-200 rounded-md p-4">
       <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
