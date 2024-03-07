@@ -74,7 +74,7 @@ const RecipeFinder = () => {
   };
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container px-8 md:mx-auto py-8">
       <h1 className="text-3xl font-semibold mb-4">Recipe Finder</h1>
       <SearchBar keyword={keyword} setKeyword={setKeyword} clearKeyword={clearKeyword} onTyping={handleTyping} />
       {error && <p className="text-red-500 mb-4">{error}</p>}
