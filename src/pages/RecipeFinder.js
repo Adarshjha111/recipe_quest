@@ -20,7 +20,7 @@ const RecipeFinder = () => {
     try {
       const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${keyword}&apiKey=${apiKey}&number=${resultsPerPage}&offset=${(page - 1) * resultsPerPage}`);
       if (!response.ok) {
-        throw new Error('Sorry, we have reached the limit for today. Please try again later.');
+        throw new Error('Sorry, we have reached the usage limit for today. Please try again later.');
       }
       const data = await response.json();
       setRecipes(prevRecipes => [...prevRecipes, ...data.results]);
